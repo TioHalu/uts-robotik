@@ -1,16 +1,50 @@
 #VRML_SIM R2023a utf8
+
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5773 0.5773 0.5773 2.0944
-  position 0 0 10
+  orientation -0.11347858265675334 0.1693414888303183 0.9790025901083947 1.2005051113009861
+  position -0.49543092592479354 -1.1540213757522206 0.3942776808579803
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorTileSize 0.25 0.25
+  wallHeight 0.05
+}
+WoodenBox {
+  translation 0.282381 -0.229961 0.05
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation -0.335929 0.0787777 0.05
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+}
+WoodenBox {
+  translation 0.101721 0.157876 0.05
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 1539.2737725343359
+  hidden position_0_1 1863.6826059175514
+  hidden linearVelocity_0 -0.055019292760894525 -0.010668321715308134 6.83494827523498e-09
+  hidden angularVelocity_0 0.000117577091054766 -0.000645730021862419 0.09037132453992223
+  hidden rotation_1 0 1 0 6.176557582516775
+  hidden linearVelocity_1 -0.05271592773845192 -0.010221228068085952 -3.809766977704166e-09
+  hidden angularVelocity_1 0.5089861275714013 -2.6248252239907113 0.09209284235076931
+  hidden rotation_2 0 1 0 3.8597549923938304
+  hidden linearVelocity_2 -0.05732946814815144 -0.011115783874601869 -2.779812562983605e-10
+  hidden angularVelocity_2 0.5578415167093154 -2.8773263429986233 0.09236156677817461
+  translation -0.2129741539531382 0.3933222787282365 -6.430816109845652e-05
+  rotation -0.0003812309369214727 -9.372806331290222e-05 -0.9999999229390085 2.9484055075329
 }
