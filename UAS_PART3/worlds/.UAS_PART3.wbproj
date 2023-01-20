@@ -5,5 +5,5 @@ sceneTreePerspectives: 000000ff000000010000000300000018000000c0000000fc010000000
 maximizedDockId: -1
 centralWidgetVisible: 1
 orthographicViewHeight: 1
-textFiles: 1 "C:/Program Files/Webots/projects/robots/sphero/bb8/controllers/bb-8/bb-8.c" "controllers/supervisor_controller/supervisor_controller.c"
+textFiles: 1 "C:/Program Files/Webots/projects/robots/sphero/bb8/controllers/bb-8/bb-8.c" "../../../UAS_PART3/controllers/supervisor_controller/supervisor_controller.c"
 consoles: Console:All:All
