@@ -3,12 +3,14 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "../protos/FourWheelsRobot.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.16399569405893724 -0.020389041124837498 -0.9862503228552766 3.3855918165680334
-  position 0.937834356713376 -0.03796752320998367 0.4595568523380649
+  orientation -0.2959354933923694 0.2751570341866641 0.9147189679285185 1.732040647383771
+  position -0.06884107725817595 -1.7045962313940628 1.6798211892118955
 }
 TexturedBackground {
 }
@@ -17,9 +19,11 @@ TexturedBackgroundLight {
 Floor {
   size 1 1
 }
+RectangleArena {
+}
 Robot {
-  translation -0.0166521 0.01005 0.0299546
-  rotation -1.3425451680392069e-24 -1.0906287763794104e-24 1 1.0471999999999997
+  translation 0.41232452418876536 0.033630111263013046 0.02250210207150281
+  rotation 0.0009548601494832581 -0.0007140628738925635 -0.9999992891779008 0.2183012840083106
   scale 0.563741 0.563741 0.563741
   children [
     DEF body Shape {
@@ -30,11 +34,12 @@ Robot {
         metalness 0
       }
       geometry Box {
-        size 0.2 0.1 0.05
+        size 0.1 0.2 0.05
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 218.26457669723803
         anchor 0.05 0.06 0
       }
       device [
@@ -43,8 +48,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05 0.06 0
-        rotation 1 0 0 1.5709
+        translation 0.05000101571542894 0.06006376762190338 0.00013049701909614066
+        rotation -0.25923139043217747 -0.9303744755115595 -0.2592342985239232 4.640260858439913
         children [
           DEF Wheel Shape {
             appearance PBRAppearance {
@@ -60,10 +65,13 @@ Robot {
         boundingObject USE Wheel
         physics DEF physics_wh Physics {
         }
+        linearVelocity -0.004881190737926991 -0.022104409640403267 5.517672096576151e-05
+        angularVelocity 0.976518035909555 -0.2166198136340463 -0.00016017703973414296
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 77.5513791856414
         anchor -0.05 0.06 0
       }
       device [
@@ -72,8 +80,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05 0.06 0
-        rotation 1 0 0 1.5709
+        translation -0.050019885061223686 0.05997688256175007 -1.1266579283967153e-05
+        rotation 0.6113958685453236 0.5023817649130428 0.6113981143318694 2.2104931903953147
         children [
           DEF Wheel Shape {
             appearance PBRAppearance {
@@ -90,10 +98,13 @@ Robot {
         boundingObject USE Wheel
         physics DEF physics_wh Physics {
         }
+        linearVelocity -0.004864480399659938 -0.022012213941077233 7.910986212441224e-06
+        angularVelocity 0.9767323449167948 -0.21565237264827147 0.00020983289811491706
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 225.63432508584583
         anchor 0.05 -0.06 0
       }
       device [
@@ -102,18 +113,21 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.05 -0.06 0
-        rotation 1 0 0 1.5708
+        translation 0.050000240798359796 -0.06000036131156173 1.9840534932187626e-07
+        rotation -0.5436994968578133 0.6393586963193053 -0.5437014939812461 2.003879779165496
         children [
           USE Wheel
         ]
         name "solid(1)"
         boundingObject USE Wheel
         physics USE physics_wh
+        linearVelocity -0.0048831027234787815 -0.022024832446112617 5.44494747774546e-07
+        angularVelocity 0.9765182712313338 -0.21661986077187143 -0.00016021071500515132
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 77.55772752840376
         anchor -0.05 -0.06 0
       }
       device [
@@ -122,19 +136,21 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.05 -0.06 0
-        rotation 1 0 0 1.5708
+        translation -0.05055776417754152 -0.059973479272700136 0.0007633746238397603
+        rotation 0.6123908494709593 0.4999521375980413 0.6123930989122802 2.214376955289476
         children [
           USE Wheel
         ]
         name "solid(2)"
         boundingObject USE Wheel
         physics USE physics_wh
+        linearVelocity -0.004971263009558161 -0.022432818593878107 2.4405727812832918e-05
+        angularVelocity 0.9765233965695481 -0.21659562498688129 -0.0001229522526845447
       }
     }
     DistanceSensor {
-      translation 0.1 0.02 0
-      rotation 0 0 1 0.87
+      translation 0.02 -0.1 0
+      rotation 0 0 -1 0.87
       children [
         DEF sensor Shape {
           appearance PBRAppearance {
@@ -152,8 +168,8 @@ Robot {
       }
     }
     DistanceSensor {
-      translation 0.1 -0.02 0
-      rotation 0 0 -1 0.87
+      translation -0.02 -0.1 0
+      rotation 0 0 -1 2.4407996938995744
       children [
         DEF sensor Shape {
           appearance PBRAppearance {
@@ -175,4 +191,17 @@ Robot {
   physics Physics {
   }
   controller "obstacle_avoid"
+  linearVelocity -0.0048716579188181255 -0.02202237090034297 1.0330317813492865e-05
+  angularVelocity 0.00025645276419182793 -2.4996312504964312e-05 -0.00025404405542537694
+}
+FourWheelsRobot {
+  hidden translation_0 0.13253395755918687 0.011839037273219232 0.023050166481692076
+  hidden rotation_0 -0.0026016905251467918 0.0016066060338369612 0.9999953250008039 0.7133424184773969
+  hidden position_0_0 31.263098244190584
+  hidden position_0_1 31.263098801398904
+  hidden position_0_2 31.263098676446106
+  hidden position_0_3 31.263099448849882
+  hidden rotation_2 -1 0 0 4.865113041678615
+  hidden rotation_3 -1 0 0 4.865213166631413
+  hidden rotation_4 -1 0 0 4.865212394227637
 }
