@@ -1,9 +1,9 @@
-## GIT UTS dan UAS ROBOTIKA 
+##  UTS dan UAS ROBOTIKA 
 
-##UAS
+# UAS
 tutorial webots dan hacking 
 
-#UTS
+# UTS
 Symforce robot bergerak bidang 2D
 
 untuk memenuhi tugas UTS Robotik 
